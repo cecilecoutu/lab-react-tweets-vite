@@ -1,38 +1,43 @@
+import "./ProfileImage.jsx";
+import "./User.jsx";
+import "./Timestamp.jsx";
+import "./Message.jsx";
+
 function Tweet() {
+  /*const tweetsArray = [
+    {
+      user: {
+        name: "Thoughts of Dog®",
+        image:
+          "https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/tweet-user-photo.png",
+        handle: "dog_feelings",
+      },
+      timestamp: "1h ago",
+      message:
+        "the human likes to say. that i live here rent free. but i would argue. this housing accommodation. is my payment. for a lifetime of love. and excellent company",
+    },
+  ];*/
   return (
-    <div className="tweet">
-      <img
-        src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/ih_logo.jpeg"
-        className="profile"
-        alt="profile"
-      />
-
-      <div className="body">
-        <div className="top">
-          <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
-          </span>
-
-          <span className="timestamp">Nov 30, 2020</span>
+    <>
+      <div className="tweet">
+        <ProfileImage
+          image={
+            "https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/ih_logo.jpeg"
+          }
+        />
+        ;
+        <User name={USER_NAME} handle={USER_HANDLE} />
+        <Timestamp time={TWEET_TIMESTAMP} />
+        <Message message={TWEET_MESSAGE} />
+        <Actions />
+        <div className="body">
+          <div className="top">
+            <span className="timestamp">Nov 30, 2020</span>
+          </div>
         </div>
-
-        <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
-        </p>
-
-        <div className="actions">
-          {/* Font Awesome icons */}
-          <i className="far fa-comment" data-testid="comment-icon"></i>
-          <i className="fas fa-retweet" data-testid="retweet-icon"></i>
-          <i className="far fa-heart" data-testid="heart-icon"></i>
-          <i className="fas fa-share" data-testid="share-icon"></i>
-        </div>
+        <i className="fas fa-ellipsis-h"></i>
       </div>
-
-      <i className="fas fa-ellipsis-h"></i>
-    </div>
+    </>
   );
 }
 

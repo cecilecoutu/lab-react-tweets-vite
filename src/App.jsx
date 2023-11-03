@@ -1,5 +1,7 @@
 import "./App.css";
-import Tweet from "./components/Tweet";
+import Tweet from "./components/Tweet.jsx";
+
+<Tweet tweet={tweetsArray[3]}></Tweet>;
 
 const tweetsArray = [
   {
